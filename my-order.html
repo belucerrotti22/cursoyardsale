@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
+    <title>Document</title>
+    <style>
+
+        :root {
+            --white: #FFFFFF;
+            --black: #000000;
+            --very-light-pink: #C7C7C7;
+            --text-input-field: #F7F7F7;
+            --hospital-green: #ACD9B2;
+            --sm: 14px;
+            --md: 16px;
+            --lg: 18px;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Quicksand', sans-serif;
+        }
+
+        .my-orders {
+            display: flex;
+            flex-direction: column;
+            width: 50%;
+            margin: 0 auto;
+        }
+
+        .resumen-compra {
+            background-color: var(--text-input-field);
+            margin: 8px;
+            display: flex;
+            justify-content: space-between;
+            border-radius: 12px;
+            
+        }
+
+        .articulo {
+            border-radius: 12px;
+            margin: 12px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .articulo:hover {
+            border: 1px solid var(--hospital-green);
+        }
+
+        .articulo:active {
+            background-color: var(--hospital-green);
+        }
+
+        .articulo:active .nombre-producto {
+            color: var(--white);
+        }
+
+        .articulo:active .precio p {
+            color: var(--white);
+        }
+
+        .articulo img {
+            width: 100px;
+            padding: 12px;
+            border-radius: 44px;
+        }
+
+        .articulo .info-producto {
+            display: flex;
+        }
+
+        .articulo .precio {
+            align-self: center;
+            font-size: large;
+            color: var(--black);
+            margin-right: 16px;
+            margin-bottom: 6px;
+        }
+
+        .info-producto .nombre-producto {
+            align-self: center;
+            color: var(--very-light-pink);
+            font-weight: lighter;
+            font-size: var(--md);
+            margin-left: 8px;
+        }
+
+        .info-compra {
+            margin-left: 16px;
+        }
+
+        .info-compra .fecha {
+            font-weight: bold;
+            margin-bottom: 0px;
+        }
+
+        .info-compra .cant-articulos {
+            color: var(--very-light-pink);
+            font-size: var(--sm);
+            font-weight: lighter;
+            margin-top: 0px;
+        }
+
+        .precio-total {
+            margin-right: 16px;
+            align-self: center;
+            margin-bottom: 6px;
+            font-size: large;
+        }
+
+        .nav {
+            border-bottom: 1px solid var(--hospital-green);
+            align-items: center;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            height: 60px;
+            margin-bottom: 18px;
+        }
+
+        .left-nav, .right-nav {
+            display: flex;
+        }
+
+        .nav .menu {
+            width: 24px;
+            margin: 12px;
+            display: none;
+        }
+
+        .nav .shopping-cart {
+            width: 24px;
+        }
+
+        .left-nav .logo {
+            width: 160px;
+            margin-left: 22px;
+        }
+
+        .nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .left-nav ul li {
+            margin-left: 18px;
+        }
+
+        .right-nav .email, .shopping-cart {
+            margin-right: 18px;
+        }
+
+        .nav a {
+            font-size: var(--md);
+            font-weight: lighter;
+            color: var(--very-light-pink);
+            background-color: var(--white);
+            padding: 3px;
+            text-decoration: none;
+            border: none;
+            height: fit-content;
+            cursor: pointer;
+        }
+
+        .nav a:hover {
+            border: 1px solid var(--hospital-green);
+            color: var(--hospital-green);
+            border-radius: 8px;
+        }
+
+        .nav a:active {
+            color: var(--white);
+            background-color: var(--hospital-green);
+            border-radius: 8px;
+        }
+
+        .nav .right-nav .shopping-cart:hover {
+            border: none;
+        }
+
+        .nav .right-nav .shopping-cart:active {
+            background-color: var(--white);
+        }
+
+        .title {
+            color: var(--black);
+            font-weight: bold;
+            margin-left: 24px;
+            margin-top: 76px;
+            margin-bottom: 42px;
+        }
+
+        .nav-title {
+            display: none;
+        }
+
+        @media (max-width: 640px) {
+
+            .my-orders {
+                width: 100%;
+                padding: 12px;
+            }
+
+            .title, .email, .logo {
+                display: none;
+            }
+
+            .nav .menu {
+                display: inline;
+            }
+
+            .left-nav ul {
+                display: none;
+            }
+
+            .left-nav ul li {
+                margin: 0px;
+            }
+
+            .nav-title {
+                display: block;
+                align-self: center;
+                margin: 2px;
+            }
+
+            .right-nav ul {
+                padding: 0;
+                margin: 0;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="main-container">
+        <nav class="nav">
+
+            <img class="menu" src="/curso-frontend-developer-practico-main/icons/icon_menu.svg" alt="menu">
+
+            <div class="left-nav">
+            
+                <img class="logo" src="/curso-frontend-developer-practico-main/logos/logo_yard_sale.svg" alt="logo">
+
+                <h2 class="nav-title">My orders</h2>
+
+                <ul>
+                    <li>
+                        <a href="/">All</a>
+                    </li>
+                    <li>
+                        <a href="/">Electronics</a>
+                    </li>
+                    <li>
+                        <a href="/">Furniture</a>
+                    </li>
+                    <li>
+                        <a href="/">Toys</a>
+                    </li>
+                    <li>
+                        <a href="/">Others</a>
+                    </li>
+    
+                </ul>
+            </div>
+
+            <div class="right-nav">
+                <ul>
+                    <li>
+                        <a class="email" href="/">belencerrotti@gmail.com</a>
+                    </li>
+                    <li>
+                        <a class="shopping-cart" href="/">
+                            <img src="/curso-frontend-developer-practico-main/icons/icon_shopping_cart_notification.svg" alt="shopping-cart">
+                        </a>
+                    </li>
+                </ul>                
+            </div>
+
+
+        </nav>
+        
+        <div class="my-orders">
+            
+            <h2 class="title">My order</h2>
+
+            <div class="resumen-compra">
+                <section class="info-compra">
+                    <p class="fecha">09.01.2023</p>
+                    <p class="cant-articulos">6 articles</p>                
+                </section>
+
+                <section class="precio-total">
+                    <p >$560,78</p>
+                </section>            
+            </div>
+
+            <div class="articulo">
+                <section class="info-producto">
+                    <img class="img-producto" src="https://images.pexels.com/photos/4526407/pexels-photo-4526407.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Product">
+                    <p class="nombre-producto">Headphones</p>                    
+                </section>
+
+                <section class="precio">
+                    <p>$23,89</p>
+                </section>                
+            </div>
+
+            <div class="articulo">
+                <section class="info-producto">
+                    <img class="img-producto" src="https://images.pexels.com/photos/2393835/pexels-photo-2393835.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Product">
+                    <p class="nombre-producto">Motorbike 97'</p>                    
+                </section>
+
+                <section class="precio">
+                    <p>$253,69</p>
+                </section>                
+            </div>
+
+            <div class="articulo">
+                <section class="info-producto">
+                    <img class="img-producto" src="https://images.pexels.com/photos/821653/pexels-photo-821653.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Product">
+                    <p class="nombre-producto">Camera HD 4K</p>                    
+                </section>
+
+                <section class="precio">
+                    <p>$83,80</p>
+                </section>                
+            </div>
+
+            <div class="articulo">
+                <section class="info-producto">
+                    <img class="img-producto" src="https://images.pexels.com/photos/993626/pexels-photo-993626.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Product">
+                    <p class="nombre-producto">Plant</p>                    
+                </section>
+
+                <section class="precio">
+                    <p>$13,66</p>
+                </section>                
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>
