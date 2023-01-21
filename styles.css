@@ -1,0 +1,189 @@
+:root {
+    --white: #FFFFFF;
+    --black: #000000;
+    --very-light-pink: #C7C7C7;
+    --text-input-field: #F7F7F7;
+    --hospital-green: #ACD9B2;
+    --sm: 14px;
+    --md: 16px;
+    --lg: 18px;
+}
+
+body {
+    margin: 0;
+    font-family: 'Quicksand', sans-serif;
+}
+
+.nav {
+    border-bottom: 1px solid var(--hospital-green);
+    align-items: center;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    height: 60px;
+    margin-bottom: 18px;
+}
+
+.left-nav {
+    display: flex;
+}
+
+.nav .menu {
+    width: 24px;
+    margin: 12px;
+    display: none;
+}
+
+.nav .shopping-cart {
+    width: 24px;
+}
+
+.left-nav .logo {
+    width: 160px;
+    margin-left: 22px;
+}
+
+.nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.left-nav ul li {
+    margin-left: 18px;
+}
+
+.right-nav a {
+    margin-right: 18px;
+}
+
+.option {
+    font-size: var(--md);
+    font-weight: lighter;
+    color: var(--very-light-pink);
+    background-color: var(--white);
+    padding: 3px;
+    text-decoration: none;
+    border: none;
+    height: fit-content;
+    cursor: pointer;
+}
+
+.left-nav a:hover {
+    border: 1px solid var(--hospital-green);
+    color: var(--hospital-green);
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.left-nav a:active {
+    color: var(--white);
+    background-color: var(--hospital-green);
+    border-radius: 8px;
+}
+
+.nav .right-nav .shopping-cart:hover {
+    border: none;
+}
+
+.nav-title {
+    display: none;
+}
+
+.right-nav .option:hover {
+    font-weight: normal;
+}
+
+
+
+.main-container {
+    position: absolute;
+    top: 46px;
+    right: 50px;
+    background: var(--white);
+    width: 124px;
+    height: 140px;
+    border: 1px solid var(--very-light-pink);
+    border-radius: 8px;
+    margin: 8px;
+    text-align: end;
+}
+
+.inactive {
+    display: none;
+}
+
+.main-container .options {
+    display: flex;
+    flex-direction: column;
+}
+
+.options {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    right: 0;
+}
+
+.options li a {
+    text-decoration: none;
+    color: var(--black);
+    font-weight: light;
+    font-size: var(--sm);
+}
+
+.options li a:hover {
+    text-decoration: underline;
+    font-weight: bolder;
+}
+
+.options li {
+    margin: 4px;
+    margin-right: 15px;
+    align-self: flex-end;
+}
+
+.options:nth-child(1) {
+    margin-top: 12px;
+}
+
+.sign-out {
+    margin-top: 12px;
+    border-top: 1px solid var(--hospital-green);
+    width: 90px;
+    padding-top: 18px;
+}
+
+.options:last-child div a:hover {
+    font-weight: bolder;
+}
+
+.options:last-child div a {
+    color: var(--hospital-green) !important;
+    font-weight: lighter;
+}
+
+@media (max-width: 640px) {
+
+    .title, .right-nav .option {
+        display: none;
+    }
+
+    .nav .menu {
+        display: inline;
+    }
+
+    .left-nav ul {
+        display: none;
+    }
+
+    .left-nav ul li {
+        margin: 0px;
+    }
+
+    .right-nav ul {
+        padding: 0;
+        margin: 0;
+    }
+}
