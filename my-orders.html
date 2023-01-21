@@ -84,169 +84,18 @@
             cursor: pointer;
         }
 
-        .nav {
-            border-bottom: 1px solid var(--hospital-green);
-            align-items: center;
-            width: 100%;
-            display: flex;
-            justify-content: space-between;
-            flex-wrap: wrap;
-            height: 60px;
-            margin-bottom: 18px;
-        }
-
-        .left-nav {
-            display: flex;
-        }
-
-        .nav .menu {
-            width: 24px;
-            margin: 12px;
-            display: none;
-        }
-
-        .nav .shopping-cart {
-            width: 24px;
-        }
-
-        .left-nav .logo {
-            width: 160px;
-            margin-left: 22px;
-        }
-
-        .nav ul {
-            list-style: none;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .left-nav ul li {
-            margin-left: 18px;
-        }
-
-        .right-nav .email, .shopping-cart {
-            margin-right: 18px;
-        }
-
-        .nav a {
-            font-size: var(--md);
-            font-weight: lighter;
-            color: var(--very-light-pink);
-            background-color: var(--white);
-            padding: 3px;
-            text-decoration: none;
-            border: none;
-            height: fit-content;
-            cursor: pointer;
-        }
-
-        .nav a:hover {
-            border: 1px solid var(--hospital-green);
-            color: var(--hospital-green);
-            border-radius: 8px;
-            cursor: pointer;
-        }
-
-        .nav a:active {
-            color: var(--white);
-            background-color: var(--hospital-green);
-            border-radius: 8px;
-        }
-
-        .nav .right-nav .shopping-cart:hover {
-            border: none;
-        }
-
-        .nav-title {
-            display: none;
-        }
-
         @media (max-width: 640px) {
 
             .my-orders {
                 width: 100%;
                 padding: 12px;
             }
-
-            .title, .email, .logo {
-                display: none;
-            }
-
-            .nav .menu {
-                display: inline;
-            }
-
-            .left-nav ul {
-                display: none;
-            }
-
-            .left-nav ul li {
-                margin: 0px;
-            }
-
-            .nav-title {
-                display: block;
-                align-self: center;
-                margin: 2px;
-            }
-
-            .right-nav ul {
-                padding: 0;
-                margin: 0;
-            }
         }
 
     </style>
 </head>
 <body>
-    <div class="main-container">
-        <nav class="nav">
-
-            <img class="menu" src="/curso-frontend-developer-practico-main/icons/icon_menu.svg" alt="menu">
-
-            <div class="left-nav">
-            
-                <img class="logo" src="/curso-frontend-developer-practico-main/logos/logo_yard_sale.svg" alt="logo">
-
-                <h2 class="nav-title" >My orders</h2>
-
-                <ul>
-                    <li>
-                        <a href="/">All</a>
-                    </li>
-                    <li>
-                        <a href="/">Electronics</a>
-                    </li>
-                    <li>
-                        <a href="/">Furniture</a>
-                    </li>
-                    <li>
-                        <a href="/">Toys</a>
-                    </li>
-                    <li>
-                        <a href="/">Others</a>
-                    </li>
-    
-                </ul>
-            </div>
-
-            <div class="right-nav">
-                <ul>
-                    <li>
-                        <a class="email" href="/">belencerrotti@gmail.com</a>
-                    </li>
-                    <li>
-                        <a class="shopping-cart" href="/">
-                            <img src="/curso-frontend-developer-practico-main/icons/icon_shopping_cart_notification.svg" alt="shopping-cart">
-                        </a>
-                    </li>
-                </ul>                
-            </div>
-
-
-        </nav>
-        
+    <div class="main-container">        
         <div class="my-orders">
             
             <h2 class="title">My orders</h2>
