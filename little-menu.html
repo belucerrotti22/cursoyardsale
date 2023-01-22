@@ -26,6 +26,72 @@
             font-family: 'Quicksand', sans-serif;
         }
 
+        .main-container {
+            position: absolute;
+            top: 46px;
+            right: 50px;
+            background: var(--white);
+            width: 124px;
+            height: 140px;
+            border: 1px solid var(--very-light-pink);
+            border-radius: 8px;
+            margin: 8px;
+            text-align: end;
+        }
+
+        .inactive {
+            display: none;
+        }
+
+        .main-container .options {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .options {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            right: 0;
+        }
+
+        .options li a {
+            text-decoration: none;
+            color: var(--black);
+            font-weight: light;
+            font-size: var(--sm);
+        }
+
+        .options li a:hover {
+            text-decoration: underline;
+            font-weight: bolder;
+        }
+
+        .options li {
+            margin: 4px;
+            margin-right: 15px;
+            align-self: flex-end;
+        }
+
+        .options:nth-child(1) {
+            margin-top: 12px;
+        }
+
+        .sign-out {
+            margin-top: 12px;
+            border-top: 1px solid var(--hospital-green);
+            width: 90px;
+            padding-top: 18px;
+        }
+
+        .options:last-child div a:hover {
+            font-weight: bolder;
+        }
+
+        .options:last-child div a {
+            color: var(--hospital-green) !important;
+            font-weight: lighter;
+        }
 
     </style>
 </head>

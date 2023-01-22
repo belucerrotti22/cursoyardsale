@@ -1,11 +1,18 @@
 const email = document.querySelector('.email');
-const menu = document.querySelector('.main-container');
+const menuDesktop = document.querySelector('.main-container-desktop-menu');
+const menuMobile = document.querySelector('.container-mobile-menu');
+const menuIcon = document.querySelector('.icon-menu');
+
 
 
 email.addEventListener('click', littleMenu);
-
+menuIcon.addEventListener('click', mobileMenu);
 
 function littleMenu (event) {
     event.preventDefault();
-    menu.classList.toggle('inactive');    
+    menuDesktop.classList.toggle('inactive');    
+}
+
+function mobileMenu () {
+    menuMobile.classList.toggle('inactive');    
 }

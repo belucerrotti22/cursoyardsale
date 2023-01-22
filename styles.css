@@ -14,6 +14,7 @@ body {
     font-family: 'Quicksand', sans-serif;
 }
 
+/*NAV BAR*/
 .nav {
     border-bottom: 1px solid var(--hospital-green);
     align-items: center;
@@ -28,10 +29,16 @@ body {
     display: flex;
 }
 
-.nav .menu {
+.nav .icon-menu {
     width: 24px;
     margin: 12px;
     display: none;
+    padding: 6px;
+    border-radius: 8px;
+}
+
+.nav .icon-menu:active {
+    background-color: var(--very-light-pink);
 }
 
 .nav .shopping-cart {
@@ -96,8 +103,9 @@ body {
 }
 
 
+/*DESKTOP MENU*/
 
-.main-container {
+.main-container-desktop-menu {
     position: absolute;
     top: 46px;
     right: 50px;
@@ -114,7 +122,7 @@ body {
     display: none;
 }
 
-.main-container .options {
+.main-container-desktop-menu .options {
     display: flex;
     flex-direction: column;
 }
@@ -164,13 +172,80 @@ body {
     font-weight: lighter;
 }
 
+/*MOBILE MENU*/
+
+.container-mobile-menu {
+    position: absolute;
+    top: 50px;
+    padding: 12px;
+    width: 90%;
+}
+
+.container-mobile-menu .lista-mobile {
+    padding: 0;
+    margin-left: 22px;
+    display: flex;
+    flex-direction: column;
+}
+
+.lista-mobile {
+    list-style: none;
+    margin-bottom: 36px;
+}
+
+.lista-mobile a {
+    text-decoration: none;
+    color: var(--black);
+    font-size: var(--md);
+    cursor: pointer;
+}
+
+.lista-mobile li {
+    margin-bottom: 2px;
+    align-self: flex-start;
+}
+
+
+.lista-mobile a:hover {
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+.lista-mobile .sign-out-mobile {
+    color: var(--hospital-green);
+    font-size: var(--sm);
+}
+
+.lista-mobile .email-mobile-menu {
+    color: var(--very-light-pink);
+    font-size: var(--sm);
+}
+
+.container-mobile-menu ul:last-child {
+    bottom: 0;
+}
+
+.container-mobile-menu ul:nth-child(2) {
+    border-top: 1px solid var(--very-light-pink);
+    padding-top: 16px;
+}
+
+.lista-mobile li h3 {
+    margin-bottom: 32px;
+}
+
+.last-list {
+    margin-top: 22px;
+}
+
+
 @media (max-width: 640px) {
 
     .title, .right-nav .option {
         display: none;
     }
 
-    .nav .menu {
+    .nav .icon-menu {
         display: inline;
     }
 
