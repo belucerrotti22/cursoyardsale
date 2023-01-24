@@ -276,7 +276,7 @@ body {
 }
 
 .articulo:hover {
-    border: 1px solid var(--hospital-green);
+    box-shadow: 6px 5px 5px var(--very-light-pink);
 }
 
 .articulo:active {
@@ -297,12 +297,18 @@ body {
     height: 14px;
     align-self: center;
     margin-left: 18px;
-    padding: 3px;
+    padding: 3px;    
+    border-radius: 3px;
+    cursor: pointer;
 }
 
 .articulo .precio img:hover {
     border: 1px solid var(--very-light-pink);
-    border-radius: 3px;
+}
+
+.articulo .precio img:active {
+    border: 1px solid var(--white);
+    background-color: var(--white);
 }
 
 .articulo img:nth-child(1) {
@@ -414,6 +420,13 @@ body {
     width: 160px;
     margin: 12px;
     border: 4px;
+    border-radius: 8px;
+    padding: 5px;
+    box-shadow: 10px 5px 5px var(--text-input-field);
+}
+
+.product-card:hover {
+    box-shadow: 10px 5px 20px var(--very-light-pink);
 }
 
 .product-card:hover .product-name {
