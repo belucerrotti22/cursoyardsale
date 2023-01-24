@@ -26,10 +26,17 @@
             font-family: 'Quicksand', sans-serif;
         }
 
+        .main-container-shopping-cart {
+            width: 380px;
+            height: 100vh;
+            right: 0;
+            position: absolute;
+        }
+
         .my-orders {
             display: flex;
             flex-direction: column;
-            width: 50%;
+            width: 100%;
             margin: 0 auto;
         }
 
@@ -92,7 +99,7 @@
         .articulo .precio {
             display: flex;
             align-self: center;
-            font-size: large;
+            font-size: normal;
             color: var(--black);
             margin-right: 16px;
             margin-bottom: 6px;
@@ -102,7 +109,7 @@
             align-self: center;
             color: var(--very-light-pink);
             font-weight: normal;
-            font-size: var(--md);
+            font-size: var(--sm);
             margin-left: 8px;
         }
 
@@ -110,7 +117,7 @@
             display: flex;
             flex-direction: row;
             justify-content: space-between;
-            width: 100%;
+            width: 80%;
             height: 44px;
             justify-items: center;
             margin: 12px;
@@ -146,7 +153,7 @@
             font-weight: bolder;
             border-radius: 12px;
             border: none;
-            width: inherit;
+            width: 30%;
             align-self: center;
             position: fixed;
             bottom: 0;
@@ -160,30 +167,61 @@
             border: 1px solid var(--hospital-green);
         }
 
-        .title {
-            color: var(--black);
-            font-weight: bold;
-            margin-left: 24px;
-            margin-top: 76px;
-            margin-bottom: 42px;
+        .title-shopping-cart {
+            display: flex;
+            padding-top: 24px;
+            margin-left: 10px;
         }
 
-        @media (max-width: 900px) {
+        .title-shopping-cart h2 {
+            color: var(--black);
+            font-weight: bold;
+            margin: 12px;
+        }
+
+        .title-shopping-cart img {
+            transform: rotate(180deg);
+            margin: 4px;
+        }
+
+        @media (max-width: 640px) {
+
+            .main-container-shopping-cart {
+                align-self: center;
+                width: 100%;
+            }
 
             .my-orders {
-                width: 90%;
+                width: 100%;
                 padding: 12px;
+            }
+
+            .checkout {
+                width: 70%;
+            }
+
+            .title-shopping-cart {
+                display: none;
+            }
+
+            .articulo .nombre-producto {
+                font-size: var(--md);
             }
         }
 
     </style>
 </head>
 <body>
-    <div class="main-container">
+    <aside class="main-container-shopping-cart">
         
         <div class="my-orders">
+
+
             
-            <h2 class="title">Shopping Cart</h2>
+            <div class="title-shopping-cart h2">
+                <img src="/curso-frontend-developer-practico-main/icons/flechita.svg" alt="flechita"> 
+                <h2>Shopping Cart</h2>
+            </div>
 
             <div class="articulo">
                 <section class="info-producto">
@@ -243,7 +281,7 @@
         </div>
 
         
-    </div>
+    </aside>
 
 </body>
 </html>
