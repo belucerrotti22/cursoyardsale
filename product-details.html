@@ -26,20 +26,17 @@
             font-family: 'Quicksand', sans-serif;
         }
 
-        .main-container {
+        .aside-description {
             width: 380px;
-            height: 100vh;
-            background-color: var(--text-input-field);
-            display: flex;
-            justify-content: space-between;
-            flex-direction: column;
-            overflow: hidden;
-            border-left: 1px solid var(--hospital-green);
+            background-color: var(--white);
+            border-bottom: 2px solid var(--hospital-green);
+            border-left: 2px solid var(--hospital-green);
             right: 0;
             position: absolute;
+            padding-top: 0px;
         }
 
-        .main-container .close {
+        .aside-description .close {
             border: none;
             background-color: var(--white);
             border-radius: 12px;
@@ -59,14 +56,14 @@
             border: 1px solid var(--very-light-pink);
         }
 
-        .main-container .product-img {
+        .aside-description .product-img {
             height: 300px;
             width: 100%;
             object-fit: cover;
             margin-bottom: 0;
         }
 
-        .main-container .product-info {
+        .aside-description .product-info {
             margin-left: 12px;
         }
 
@@ -91,7 +88,12 @@
             color: var(--very-light-pink);
         }
 
-        .main-container .primary-button {
+        .aside-description .primary-button {
+            display: flex;
+            justify-content: center;
+        }
+
+        .aside-description .primary-button button {
             display: flex;
             align-items: center;
             justify-content: center;
@@ -101,51 +103,54 @@
             background-color: var(--hospital-green);
             margin-bottom: 10px;
             width: 80%;
-            align-self: center;
         }
 
-        .main-container .primary-button p {
+        .aside-description .primary-button p {
             font-size: large;
             font-weight: bold;
         }
 
-        .main-container .primary-button:hover {
+        .aside-description .primary-button button:hover {
             border: 1px solid var(--hospital-green);
             background-color: var(--white);
             color: var(--hospital-green);
         }
 
-        .main-container .primary-button:hover img {
+        .aside-description .primary-button button:hover img {
             display: none;
         }    
         
         @media (max-width: 640px) {
-            .main-container {
+            .aside-description {
                 width: 100%;
+                border: none;
             }
         }
 
     </style>
 </head>
 <body>
-    <aside class="main-container">
-        <div>
-            <button class="close">
-                <img src="/curso-frontend-developer-practico-main/icons/icon_close.png" alt="close">
-            </button>
+    <aside class="aside-description">
+        
+        <button class="close">
+            <img src="/curso-frontend-developer-practico-main/icons/icon_close.png" alt="close">
+        </button>
             
-            <img class="product-img" src="https://images.pexels.com/photos/821653/pexels-photo-821653.jpeg?auto=compress&cs=tinysrgb&w=600" alt="product">
-        </div>
+        <img class="product-img" src="https://images.pexels.com/photos/821653/pexels-photo-821653.jpeg?auto=compress&cs=tinysrgb&w=600" alt="product">
+        
         <section class="product-info">
             <p class="price">$200,50</p>
             <p class="product-name">Camera 4K HD</p>
             <p class="product-description">This is the best camera ever created, everyone should have one of these in their homes. It´s ideal for vacations, trips, holidays. The best way to save your memories forever.</p>                 
         </section>
 
-        <button class="primary-button">
-            <img src="/curso-frontend-developer-practico-main/icons/bt_add_to_cart.svg" alt="shopping-cart">
-            <p>Add to cart</p>
-        </button>   
+        <div class="primary-button">
+            <button>
+                <img src="/curso-frontend-developer-practico-main/icons/bt_add_to_cart.svg" alt="shopping-cart">
+                <p>Add to cart</p>
+            </button>              
+        </div>
+
     </aside>
 
 </body>

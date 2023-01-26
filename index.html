@@ -120,7 +120,7 @@
 
         </nav>
 
-        <aside class="main-container-shopping-cart inactive">
+        <aside id="shopping-cart" class="aside inactive">
         
             <div class="my-orders">
                 
@@ -187,6 +187,29 @@
             </div>
     
             
+        </aside>
+
+        <aside id="product-description" class="aside inactive">
+        
+            <button class="close">
+                <img src="/curso-frontend-developer-practico-main/icons/icon_close.png" alt="close">
+            </button>
+                
+            <img id="img" class="product-img" src="https://images.pexels.com/photos/821653/pexels-photo-821653.jpeg?auto=compress&cs=tinysrgb&w=600" alt="product">
+            
+            <section class="product-info">
+                <p id="price" class="price"></p>
+                <p id="name" class="product-name"></p>
+                <p id="description" class="product-description"></p>                 
+            </section>
+    
+            <div class="primary-button">
+                <button>
+                    <img src="/curso-frontend-developer-practico-main/icons/bt_add_to_cart.svg" alt="shopping-cart">
+                    <p>Add to cart</p>
+                </button>              
+            </div>
+    
         </aside>
 
         <div class="main-page">

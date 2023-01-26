@@ -240,16 +240,19 @@ body {
 }
 
 
-/*SHOPPING CART*/
+/*SHOPPING CART (ASIDE)*/
 
-.main-container-shopping-cart {
-    width: 380px;
+.aside {
+    width: 320px;
     right: 0;
     padding-top: 0px;
     position: absolute;
     background-color: var(--white);
-    border-bottom: 2px solid var(--hospital-green);
-    border-left: 2px solid var(--hospital-green);
+    box-shadow: -6px 5px 15px var(--very-light-pink);
+}
+
+#shopping-cart {
+    width: 380px;
 }
 
 .my-orders {
@@ -464,7 +467,7 @@ body {
     width: 100%;
 }
 
-.product-info {
+.product-card .product-info {
     width: 130px;
 }
 
@@ -489,6 +492,95 @@ body {
     margin-top: 12px;
 }
 
+
+
+/*PRODUCT INFORMATION (ASIDE)*/
+
+.aside .close {
+    border: none;
+    background-color: var(--white);
+    border-radius: 12px;
+    position: absolute;
+    margin: 4px;
+    width: 28px;
+    height: 28px;
+    cursor: pointer;
+}
+
+.close img {
+    width: 70%;
+    margin-top: 4px;
+}
+
+.close:hover {
+    border: 1px solid var(--very-light-pink);
+}
+
+.aside .product-img {
+    height: 300px;
+    width: 100%;
+    object-fit: cover;
+    margin-bottom: 0;
+}
+
+.aside .product-info {
+    margin-left: 12px;
+}
+
+.aside .product-info .price {
+    font-weight: bold;
+    font-size: var(--lg);
+    color: var(--black);
+    margin-bottom: 0;
+
+}
+
+.aside .product-info .product-name {
+    font-weight: normal;
+    font-size: var(--md);
+    color: var(--very-light-pink);
+    margin-top: 2px;
+}
+
+.product-info .product-description {
+    font-weight: lighter;
+    font-size: var(--sm);
+    color: var(--very-light-pink);
+}
+
+.aside .primary-button {
+    display: flex;
+    justify-content: center;
+}
+
+.aside .primary-button button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: 18px;
+    color: var(--white);
+    background-color: var(--hospital-green);
+    margin-bottom: 10px;
+    width: 80%;
+}
+
+.aside .primary-button p {
+    font-size: large;
+    font-weight: bold;
+}
+
+.aside .primary-button button:hover {
+    border: 1px solid var(--hospital-green);
+    background-color: var(--white);
+    color: var(--hospital-green);
+}
+
+.aside .primary-button button:hover img {
+    display: none;
+}    
+
+
 @media (max-width: 850px) {
 
     .title, .right-nav .option {
@@ -512,9 +604,10 @@ body {
         margin: 0;
     }
 
-    .main-container-shopping-cart {
+    .aside {
         align-self: center;
         width: 100%;
+        border: none;
     }
 
     .my-orders {
